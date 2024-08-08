@@ -2,5 +2,30 @@
 title: "r-data-exploration"
 author: "Stephen Carroll"
 format: html
+editor_options: 
+  chunk_output_type: console
 ---
+
+```{r}
+library(tidyverse)
+library(skimr)
+library(GGally)
+```
+
+```{r}
+names(diamonds)
+
+dim(diamonds)
+
+summary(diamonds)
+
+head(diamonds)
+
+tail(diamonds)
+
+skimr::skim(diamonds)
+
+GGally :: ggpairs(data = diamonds)
+```
+
 
