@@ -10,6 +10,7 @@ editor_options:
 library(tidyverse)
 library(skimr)
 library(GGally)
+library(ggplot2)
 ```
 
 ```{r}
@@ -25,7 +26,17 @@ tail(diamonds)
 
 skimr::skim(diamonds)
 
-GGally :: ggpairs(data = diamonds)
+#GGally::ggpairs(diamonds)
+
+ggplot(data = diamonds, aes( x = carat, y = price ))+
+  geom_point()
+
+ggplot(data = diamonds, aes(x = carat)) +
+  geom_histogram()
+       
+ggplot(data = diamonds, aes(x =clarity, y = price))+
+  geom_boxplot()
+
 ```
 
 
